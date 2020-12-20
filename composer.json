@@ -1,0 +1,54 @@
+{
+  "name": "mihdan/whisk-recipe-widgets",
+  "description": "whisk-recipe-widgetst",
+  "license": "GPL-2.0",
+  "keywords": [
+    "cyrillic, georgian, latin, l10n, russian, rustolat, slugs, translations, transliteration"
+  ],
+  "homepage": "https://github.com/mihdan/whisk-recipe-widgets",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Mikhail Kobzarev",
+      "email": "mikhail@kobzarev.com",
+      "homepage": "https://www.kobzarev.com/"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/mihdan/whisk-recipe-widgets/issues"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "*",
+    "wptrt/admin-notices": "^1.0",
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "imangazaliev/didom": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "sebastian/phpcpd": "^3.0",
+    "10up/wp_mock": "~0.3",
+    "squizlabs/php_codesniffer": "^2.9",
+    "phpcompatibility/php-compatibility": "^9.0",
+    "wp-coding-standards/wpcs": "^1.2",
+    "wp-cli/wp-cli": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "includes"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "includes"
+    ]
+  }
+}

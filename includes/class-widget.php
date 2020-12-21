@@ -25,10 +25,27 @@ class Widget {
 	public function setup() {}
 
 	public function hooks() {
+		add_action( 'init', [ $this, 'enqueue_scripts' ] );
+		add_action( 'wp_footer', [ $this, 'init_widget' ] );
 		add_filter( 'the_content', [ $this, 'append_widget_to_content' ] );
 		add_action( 'woocommerce_after_single_product_summary', [ $this, 'append_widget_to_woocommerce_product' ], 30 );
 		add_shortcode( 'mihdan-mailru-pulse-widget', [ $this, 'shortcode' ] );
 	}
+
+	public function enqueue_scripts(){
+		wp_enqueue_script( "whisk-sl", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false );
+	}
+
+	public function init_widget(){ ?>
+		<script>
+		var whisk = whisk || {};
+		whisk.queue = whisk.queue || [];
+
+		whisk.queue.push(function () {
+			whisk.shoppingList.defineWidget("NVFU-JQJX-MXIR-EIQJ");
+		});
+		</script>
+	<?php }
 
 	/**
 	 * Add shortcode `[mihdan-mailru-pulse-widget]`.

@@ -18,32 +18,59 @@ class Widget {
 	public function __construct($wposa_obj) {
 		$this->wposa_obj = $wposa_obj;
 
-		$this->setup();
 		$this->hooks();
-	}
-
-	public function setup() {
 	}
 
 	public function hooks() {
 		add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
 		add_filter('the_content', [$this, 'append_widget_to_content']);
 		add_action('woocommerce_after_single_product_summary', [$this, 'append_widget_to_woocommerce_product'], 30);
-		add_shortcode('mihdan-mailru-pulse-widget', [$this, 'shortcode']);
+		add_shortcode('wx-sl-widget', [$this, 'shortcode']);
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_script("whisk-sl", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
-		wp_add_inline_script( 'whisk-sl', 'var whisk = whisk || {};
-  whisk.queue = whisk.queue || [];
+		$format          = $this->wposa_obj->get_option('format', 'shopping-list');
+		$btn_bg          = $this->wposa_obj->get_option('button-bg', 'shopping-list');
+		$btn_radius      = $this->wposa_obj->get_option('button-border-radius', 'shopping-list');
+		$btn_text_color  = $this->wposa_obj->get_option('button-text-color', 'shopping-list');
+		$btn_text        = $this->wposa_obj->get_option('button-text', 'shopping-list');
+		$link_text_color = $this->wposa_obj->get_option('link-text-color', 'shopping-list');
+		$options         = [
+			'format'          => $format,
+			'btn_bg'          => $btn_bg,
+			'btn_radius'      => $btn_radius,
+			'btn_text_color'  => $btn_text_color,
+			'btn_text'        => $btn_text,
+			'link_text_color' => $link_text_color
+		];
 
-  whisk.queue.push(function () {
-    whisk.shoppingList.defineWidget("MBAO-GAEI-PTUR-ORAJ");
-  });' );
+		wp_enqueue_script("whisk-sl", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
+		var_dump($options);
+
+		if ($options) {
+
+		}
+
+		wp_add_inline_script('whisk-sl', 'var whisk = whisk || {}; whisk.queue = whisk.queue || [];
+		whisk.queue.push(function () {
+		whisk.shoppingList.defineWidget("MBAO-GAEI-PTUR-ORAJ", {
+			styles: {
+				size: "large",
+				  linkColor: "#577B6F",
+				  button: {
+						color: "#6E9386",
+					textColor: "#2E1D1D",
+					borderRadius: 4
+				  }
+				}
+			});
+		});');
+
+
 	}
 
 	/**
-	 * Add shortcode `[mihdan-mailru-pulse-widget]`.
+	 * Add shortcode `[wx-sl-widget]`.
 	 *
 	 * @return string
 	 */
@@ -64,15 +91,6 @@ class Widget {
 		}
 
 		return $content;
-	}
-
-	/**
-	 * Append Pulse widget to WooCommerce product single page.
-	 */
-	public function append_widget_to_woocommerce_product() {
-		if (is_singular('product') && 'on' === $this->wposa_obj->get_option('auto_append', 'widget')) {
-			echo $this->html();
-		}
 	}
 
 	/**

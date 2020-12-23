@@ -69,7 +69,7 @@ class Settings {
 			'shopping-list',
 			array(
 				'id'      => 'format',
-				'type'    => 'radio',
+					'type'    => 'radio',
 				'name'    => __( 'Widget format', 'whisk-recipe-widgets' ),
 				'options' => array(
 					'compact' => __( 'Compact', 'whisk-recipe-widgets' ),
@@ -89,6 +89,19 @@ class Settings {
 				'placeholder' => __( '#15D18F', 'whisk-recipe-widgets' ),
 			)
 		);
+
+		$this->wposa_obj->add_field(
+			'shopping-list',
+			array(
+				'id'          => 'button-border-radius',
+				'type'        => 'number',
+				'name'        => __( 'Button border radius', 'whisk-recipe-widgets' ),
+				'desc'        => __( 'in pixels', 'whisk-recipe-widgets' ),
+				'placeholder' => __( '4', 'whisk-recipe-widgets' ),
+			)
+		);
+
+
 
 		$this->wposa_obj->add_field(
 			'shopping-list',

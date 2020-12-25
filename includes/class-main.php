@@ -14,79 +14,6 @@ use WPTRT\AdminNotices\Notices;
 class Main {
 
 	private $feedname;
-	private $allowable_tags = array(
-		'a'          => array(
-			'href'   => true,
-			'target' => true,
-			'title'  => true,
-		),
-		'abbr'       => array(
-			'title' => true,
-		),
-		'acronym'    => array(
-			'title' => true,
-		),
-		'q'          => array(
-			'cite' => true,
-		),
-		'blockquote' => array(
-			'cite' => true,
-		),
-		'p'          => array(),
-		'em'         => array(),
-		'i'          => array(),
-		'b'          => array(),
-		'strong'     => array(),
-		's'          => array(),
-		'strike'     => array(),
-		'img'        => array(
-			'src'    => true,
-			'width'  => true,
-			'height' => true,
-			'alt'    => true,
-			'title'  => true,
-		),
-		'video'      => array(
-			'src'      => true,
-			'autoplay' => true,
-			'controls' => true,
-			'height'   => true,
-			'width'    => true,
-			'loop'     => true,
-			'poster'   => true,
-			'preload'  => true,
-		),
-		'source'     => array(
-			'src'   => true,
-			'type'  => true,
-			'media' => true,
-		),
-		'figure'     => array(),
-		'figcaption' => array(),
-		'iframe'     => array(
-			'src'    => true,
-			'width'  => true,
-			'height' => true,
-		),
-		'cite'       => array(),
-		'code'       => array(),
-		'pre'        => array(),
-		'del'        => array(),
-		'h1'         => array(),
-		'h2'         => array(),
-		'h3'         => array(),
-		'h4'         => array(),
-		'h5'         => array(),
-		'h6'         => array(),
-		'table'      => array(),
-		'tbody'      => array(),
-		'tr'         => array(),
-		'th'         => array(),
-		'td'         => array(),
-		'ul'         => array(),
-		'ol'         => array(),
-		'li'         => array(),
-	);
 
 	/**
 	 * @var array $enclosures Enclosures list.
@@ -144,16 +71,6 @@ class Main {
 			'auto_append' => 'off',
 		],
 	];
-
-	/**
-	 * @var array $amp_data array of AMP plugins.
-	 */
-	private $amp_data = [
-		'amp_init'      => 'amp_get_permalink',
-		'ampforwp_init' => '\AMPforWP\AMPVendor\amp_get_permalink',
-	];
-
-	private $amp_provider = '';
 
 	/**
 	 * @var string $version Plugin version.
@@ -218,11 +135,6 @@ class Main {
 		$this->wposa_obj     = new WP_OSA();
 		$this->settings      = new Settings( $this->wposa_obj );
 		$this->widget        = new Widget( $this->wposa_obj );
-
-		$this->post_type   = $this->wposa_obj->get_option( 'post_types', 'feed' );
-		$this->total_posts = $this->wposa_obj->get_option( 'total_posts', 'feed', 10 );
-
-		$this->allowable_tags = apply_filters( 'mihdan_mailru_pulse_feed_allowable_tags', $this->allowable_tags );
 	}
 
 	/**

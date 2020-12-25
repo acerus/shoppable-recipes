@@ -36,37 +36,44 @@ class Widget {
 		$btn_text        = $this->wposa_obj->get_option('button-text', 'shopping-list');
 		$link_text_color = $this->wposa_obj->get_option('link-text-color', 'shopping-list');
 		$options         = [
-			'format'          => $format,
-			'btn_bg'          => $btn_bg,
-			'btn_radius'      => $btn_radius,
-			'btn_text_color'  => $btn_text_color,
-			'btn_text'        => $btn_text,
-			'link_text_color' => $link_text_color
+			'format'     => $format,
+			'btn_bg'     => $btn_bg,
+			'btn_radius' => $btn_radius,
+			'btn_color'  => $btn_text_color,
+			'btn_text'   => $btn_text,
+			'link_color' => $link_text_color
 		];
+		?>
 
-		wp_enqueue_script("whisk-sl", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
-		var_dump($options);
+		<script>
 
-		if ($options) {
+		<?php ob_start(); ?>
 
-		}
-
-		wp_add_inline_script('whisk-sl', 'var whisk = whisk || {}; whisk.queue = whisk.queue || [];
+		var whisk = whisk || {};
+		whisk.queue = whisk.queue || [];
 		whisk.queue.push(function () {
-		whisk.shoppingList.defineWidget("MBAO-GAEI-PTUR-ORAJ", {
-			styles: {
-				size: "large",
-				  linkColor: "#577B6F",
-				  button: {
-						color: "#6E9386",
-					textColor: "#2E1D1D",
-					borderRadius: 4
-				  }
+			whisk.shoppingList.defineWidget("MBAO-GAEI-PTUR-ORAJ", {
+				styles: {
+					size: "<?= $options['format'] ?>",
+					linkColor: "<?= $options['link_color'] ? $options['link_color'] : '#15D18F'?>",
+					button: {
+						color: "<?= $options['btn_bg'] ? $options['btn_bg'] : '#15D18F'?>",
+						textColor: "<?= $options['btn_color'] ? $options['btn_color'] : '#FFFFFF'?>",
+						borderRadius: <?= $options['btn_radius'] ? $options['btn_radius'] : 3 ?>,
+						text: "<?= $options['btn_text'] ? $options['btn_text'] : 'Get ingredients'?>"
+					}
 				}
 			});
-		});');
+		});
 
+		<?php $inline = ob_get_clean(); ?>
 
+		</script>
+
+		<?php
+		var_dump($inline);
+		wp_enqueue_script("whisk-sl", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
+		wp_add_inline_script("whisk-sl", $inline);
 	}
 
 	/**

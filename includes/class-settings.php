@@ -68,12 +68,26 @@ class Settings {
 		$this->wposa_obj->add_field(
 			'shopping-list',
 			array(
-				'id'      => 'format',
-					'type'    => 'radio',
-				'name'    => __( 'Widget format', 'whisk-recipe-widgets' ),
+				'id'   => 'insert_way',
+				'type' => 'radio',
+				'name' => __( 'How to insert widget', 'whisk-recipe-widgets' ),
+				'desc' => __( 'If choose manual insertion, use shortcode [wx-shopping-list]', 'whisk-recipe-widgets' ),
 				'options' => array(
-					'compact' => __( 'Compact', 'whisk-recipe-widgets' ),
-					'large' => __( 'Large', 'whisk-recipe-widgets' ),
+					'posts' => __( 'Automatically, below posts content', 'whisk-recipe-widgets' ),
+					'shortcode' => __( 'Manually, using shortcode', 'whisk-recipe-widgets' ),
+				),
+			)
+		);
+
+		$this->wposa_obj->add_field(
+			'shopping-list',
+			array(
+				'id'      => 'format',
+				'type'    => 'radio',
+				'name'    => __( 'Widget format', 'whisk-recipe-widgets' ),
+				'options' => array (
+					'compact' => __('Compact', 'whisk-recipe-widgets'),
+					'large'   => __('Large', 'whisk-recipe-widgets'),
 				),
 				'default' => 'compact',
 			)
@@ -133,16 +147,6 @@ class Settings {
 				'name'        => __( 'Link text color', 'whisk-recipe-widgets' ),
 				'desc'        => __( 'Color description', 'whisk-recipe-widgets' ),
 				'placeholder' => __( '#FFFFFF', 'whisk-recipe-widgets' ),
-			)
-		);
-
-		$this->wposa_obj->add_field(
-			'shopping-list',
-			array(
-				'id'   => 'auto_append',
-				'type' => 'checkbox',
-				'name' => __( 'Auto Append', 'whisk-recipe-widgets' ),
-				'desc' => __( 'Автоматически добавлять виджет в конец записей', 'whisk-recipe-widgets' ),
 			)
 		);
 

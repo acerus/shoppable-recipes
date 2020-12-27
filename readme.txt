@@ -63,7 +63,7 @@ Requires PHP: 5.6.20
 
 `
 add_filter(
-	'mihdan_mailru_pulse_feed_feedname',
+	'WHISK_WIDGETS_feedname',
 	function() {
     	return 'mailru';
 	}
@@ -78,13 +78,13 @@ add_filter(
 
 Добавьте в файл `functions.php` вашей дочерней темы или через плагин сниппетов следующий код:
 
-`add_filter( 'mihdan_mailru_pulse_feed_exclude_post_by_default', '__return_true' );`
+`add_filter( 'WHISK_WIDGETS_exclude_post_by_default', '__return_true' );`
 
 = Как автоматически исключать новые термы из ленты =
 
 Добавьте в файл `functions.php` вашей дочерней темы или через плагин сниппетов следующий код:
 
-`add_filter( 'mihdan_mailru_pulse_feed_exclude_term_by_default', '__return_true' );`
+`add_filter( 'WHISK_WIDGETS_exclude_term_by_default', '__return_true' );`
 
 
 = Вместо ленты я вижу с ошибку 404 =
@@ -121,15 +121,15 @@ add_filter(
 == Changelog ==
 
 = 0.3.10 (02.12.2020) =
-* Added new filter `mihdan_mailru_pulse_feed_exclude_post_by_default`
-* Added new filter `mihdan_mailru_pulse_feed_exclude_term_by_default`
+* Added new filter `WHISK_WIDGETS_exclude_post_by_default`
+* Added new filter `WHISK_WIDGETS_exclude_term_by_default`
 
 = 0.3.9 (20.10.2020) =
 * Updated readme
 * Updated plugin assets
 
 = 0.3.8 (19.10.2020) =
-* Added new filter `mihdan_mailru_pulse_feed_allowable_tags`
+* Added new filter `WHISK_WIDGETS_allowable_tags`
 * Added support for "The Voux" theme.
 
 = 0.3.7 (17.08.2020) =
@@ -139,7 +139,7 @@ add_filter(
 * Fixed bug with plugin update
 
 = 0.3.5 (16.08.2020) =
-* Added new filter `mihdan_mailru_pulse_feed_entities_replacement`
+* Added new filter `WHISK_WIDGETS_entities_replacement`
 * Added support for WordPress 5.5
 * Fixed bug with `EntityRef`
 
@@ -168,8 +168,8 @@ add_filter(
 = 0.2.3 (20.04.2020) =
 * Wrap image with `<figure>` tag for fulltext.
 * Added `<figure>`, `<figcaption>`, `<iframe>` to allowable tags
-* Added filter `mihdan_mailru_pulse_feed_item_excerpt`
-* Added filter `mihdan_mailru_pulse_feed_item_content`
+* Added filter `WHISK_WIDGETS_item_excerpt`
+* Added filter `WHISK_WIDGETS_item_content`
 
 = 0.2.2 (10.02.2020) =
 * Added `uninstall.php` for remove options on uninstall
@@ -185,7 +185,7 @@ add_filter(
 * Added Pulse widget for custom post types
 * Added shortcode `[pulse]` for widget
 * Added tag `<content:encoded>` for fulltext
-* Added hook `mihdan_mailru_pulse_feed_item`
+* Added hook `WHISK_WIDGETS_item`
 
 = 0.1.7 (10.01.2020) =
 * Fixed bug with CPT
@@ -202,7 +202,7 @@ add_filter(
 
 = 0.1.3 (27.12.2019) =
 * Added settings for feed source
-* Added new hook `mihdan_mailru_pulse_feed_head`
+* Added new hook `WHISK_WIDGETS_head`
 * Added setting link to plugins list
 * Fixed bugs
 

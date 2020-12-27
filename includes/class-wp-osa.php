@@ -69,7 +69,7 @@ class WP_OSA {
 		wp_enqueue_style('wp-color-picker');
 
 		// Media Uploader.
-		wp_enqueue_media();
+		//wp_enqueue_media();
 	}
 
 
@@ -717,14 +717,14 @@ class WP_OSA {
 			'Whisk Recipe Widgets',
 			'Whisk Recipe Widgets',
 			'manage_options',
-			str_replace('-', '_', MIHDAN_MAILRU_PULSE_FEED_SLUG),
+			str_replace('-', '_', WHISK_WIDGETS_SLUG),
 			[$this, 'plugin_page']
 		);
 	}
 
 	public function plugin_page() {
 		echo '<div class="wrap">';
-		echo '<h1>Whisk Recipe Widgets <span style="font-size:50%;">v' . MIHDAN_MAILRU_PULSE_FEED_VERSION . '</span></h1>';
+		echo '<h1>Whisk Recipe Widgets <span style="font-size:50%;">v' . WHISK_WIDGETS_VERSION . '</span></h1>';
 		$this->show_navigation();
 		$this->show_forms();
 		echo '</div>';

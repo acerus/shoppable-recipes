@@ -18,7 +18,7 @@
  * GitHub Plugin URI: https://github.com/mihdan/whisk-recipe-widgets
  *
  * @package whisk-recipe-widgets
- * @author  Mikhail Kobzarev
+ * @author  Pavel Fedorov
  */
 use Whisk\RecipeWidgets\Main;
 
@@ -26,11 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'MIHDAN_MAILRU_PULSE_FEED_VERSION', '0.3.10' );
-define( 'MIHDAN_MAILRU_PULSE_FEED_PATH', __DIR__ );
-define( 'MIHDAN_MAILRU_PULSE_FEED_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
-define( 'MIHDAN_MAILRU_PULSE_FEED_FILE', __FILE__ );
-define( 'MIHDAN_MAILRU_PULSE_FEED_SLUG', 'whisk-recipe-widgets' );
+define( 'WHISK_WIDGETS_VERSION', '1.0' );
+define( 'WHISK_WIDGETS_PATH', __DIR__ );
+define( 'WHISK_WIDGETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+define( 'WHISK_WIDGETS_FILE', __FILE__ );
+define( 'WHISK_WIDGETS_SLUG', 'whisk-recipe-widgets' );
 
 /**
  * Init plugin class on plugin load.
@@ -39,7 +39,7 @@ define( 'MIHDAN_MAILRU_PULSE_FEED_SLUG', 'whisk-recipe-widgets' );
 static $plugin;
 
 if ( ! isset( $plugin ) ) {
-	require_once MIHDAN_MAILRU_PULSE_FEED_PATH . '/vendor/autoload.php';
+	require_once WHISK_WIDGETS_PATH . '/vendor/autoload.php';
 	$plugin = new Main();
 }
 

@@ -1,15 +1,15 @@
 {
-  "name": "mihdan/whisk-recipe-widgets",
-  "description": "whisk-recipe-widgetst",
+  "name": "whisk/whisk-widgets",
+  "description": "Whisk widgets for recipes: Shopping List",
   "license": "GPL-2.0",
   "keywords": [
-    "cyrillic, georgian, latin, l10n, russian, rustolat, slugs, translations, transliteration"
+    "whisk, shoppable recipes, shopping list, widget, foodtech"
   ],
   "homepage": "https://github.com/mihdan/whisk-recipe-widgets",
   "type": "wordpress-plugin",
   "authors": [
     {
-      "name": "Mikhail Kobzarev",
+      "name": "Pavel Fedorov",
       "email": "mikhail@kobzarev.com",
       "homepage": "https://www.kobzarev.com/"
     }
@@ -26,11 +26,7 @@
     }
   ],
   "require": {
-    "composer/installers": "*",
-    "wptrt/admin-notices": "^1.0",
-    "ext-dom": "*",
-    "ext-libxml": "*",
-    "imangazaliev/didom": "*"
+    "composer/installers": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

@@ -11,3 +11,4 @@ vendor/
 *.zip
 *.lock
 /.idea/
+.idea/workspace.xml

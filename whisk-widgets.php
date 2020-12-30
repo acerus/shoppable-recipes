@@ -3,19 +3,19 @@
  * Whisk Widgets
  *
  * Plugin Name: Whisk Recipe Widgets
- * Plugin URI: https://wordpress.org/plugins/whisk-recipe-widgets/
+ * Plugin URI:
  * Description: Whisk Recipe widgets
  * Author: Pavel Fedorov
- * Author URI: https://www.kobzarev.com/
+ * Author URI: http://paulfedorov.blog/
  * Requires at least: 5.0
  * Tested up to: 5.6
- * Version: 0.3.10
- * Stable tag: 0.3.10
+ * Version: 1.0
+ * Stable tag: 1.0
  *
  * Text Domain: whisk-recipe-widgets
  * Domain Path: /languages/
  *
- * GitHub Plugin URI: https://github.com/mihdan/whisk-recipe-widgets
+ * GitHub Plugin URI: https://github.com/acerus/whisk-widgets
  *
  * @package whisk-recipe-widgets
  * @author  Pavel Fedorov

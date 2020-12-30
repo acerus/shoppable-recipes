@@ -71,12 +71,20 @@ class Settings {
 				'id'   => 'insert_way',
 				'type' => 'radio',
 				'name' => __( 'How to insert widget', 'whisk-recipe-widgets' ),
-				'desc' => __( 'If choose manual insertion, use shortcode [wx-shopping-list]', 'whisk-recipe-widgets' ),
 				'options' => array(
 					'posts' => __( 'Automatically, below posts content', 'whisk-recipe-widgets' ),
 					'shortcode' => __( 'Manually, using shortcode', 'whisk-recipe-widgets' ),
 				),
 			)
+		);
+
+		$this->wposa_obj->add_field(
+			'shopping-list',
+			array(
+				'id'   => 'shortcode',
+				'type' => 'html',
+				'name' => __( 'Widget shortcode', 'whisk-recipe-widgets' ),
+				'desc' => __( 'If choose manual insertion, use shortcode <code>[wx-shopping-list]</code>', 'whisk-recipe-widgets' ),)
 		);
 
 		$this->wposa_obj->add_field(
@@ -152,50 +160,30 @@ class Settings {
 
 		$this->wposa_obj->add_section(
 			array(
-				'id'    => 'contacts',
-				'title' => __( 'Contacts', 'whisk-recipe-widgets' ),
+				'id'    => 'support',
+				'title' => __( 'Support', 'whisk-recipe-widgets' ),
 			)
 		);
 
 		$this->wposa_obj->add_field(
-			'contacts',
+			'support',
 			array(
 				'id'   => 'help',
 				'type' => 'html',
-				'name' => __( 'Помощь', 'whisk-recipe-widgets' ),
-				'desc' => __( 'Нужна помощь?<br />По всем вопросам пишите в телеграм <a href="https://t.me/mihdan" target="_blank">@mihdan</a>.', 'whisk-recipe-widgets' ),
+				'name' => __( 'Need help?', 'whisk-recipe-widgets' ),
+				'desc' => __( 'You can contact me via <a href="https://t.me/bewareofseagulls" target="_blank">Telegram</a> or <a href="mailto:paul.fedorov@gmail.com" target="_blank">e-mail</a>.', 'whisk-recipe-widgets' ),
 			)
 		);
 
-		$this->wposa_obj->add_field(
-			'contacts',
-			array(
-				'id'   => 'donate',
-				'type' => 'html',
-				'name' => __( 'Благодарность', 'whisk-recipe-widgets' ),
-				'desc' => __( 'Хотите отблагодарить автора?<br />Сделать это можно на <a href="https://www.kobzarev.com/donate/" target="_blank">официальном сайте</a>.', 'whisk-recipe-widgets' ),
-			)
-		);
-
-		$this->wposa_obj->add_field(
-			'contacts',
-			array(
-				'id'   => 'mark',
-				'type' => 'html',
-				'name' => __( 'Оценка', 'whisk-recipe-widgets' ),
-				'desc' => __( 'Хотите оценить плагин ★★★★★?<br />Сделать это можно на <a href="https://wordpress.org/support/plugin/whisk-recipe-widgets/reviews/?rate=5#new-post" target="_blank">официальном странице</a> плагина.', 'whisk-recipe-widgets' ),
-			)
-		);
-
-		$this->wposa_obj->add_field(
-			'contacts',
-			array(
-				'id'   => 'plugins',
-				'type' => 'html',
-				'name' => __( 'Плагины автора', 'whisk-recipe-widgets' ),
-				'desc' => __( 'Понравился плагин?<br />Остальные полезные плагины автора вы можете посмотреть в <a href="https://profiles.wordpress.org/mihdan/#content-plugins" target="_blank">официальном репозитории</a> wp.org.', 'whisk-recipe-widgets' ),
-			)
-		);
+		//$this->wposa_obj->add_field(
+		//	'support',
+		//	array(
+		//		'id'   => 'mark',
+		//		'type' => 'html',
+		//		'name' => __( 'Оценка', 'whisk-recipe-widgets' ),
+		//		'desc' => __( 'Хотите оценить плагин ★★★★★?<br />Сделать это можно на <a href="https://wordpress.org/support/plugin/whisk-recipe-widgets/reviews/?rate=5#new-post" target="_blank">официальном странице</a> плагина.', 'whisk-recipe-widgets' ),
+		//	)
+		//);
 	}
 }
 

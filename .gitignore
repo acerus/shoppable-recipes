@@ -10,5 +10,4 @@ vendor/
 *.tar.gz
 *.zip
 *.lock
-/.idea/
-.idea/workspace.xml
+.idea/*

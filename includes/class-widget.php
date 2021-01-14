@@ -85,12 +85,12 @@ class Widget {
 		// auto-insert script and inline widget into all posts, below content
 		if ('posts' === $this->insertion && is_singular()) {
 			wp_enqueue_script("sl-widget", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
-			wp_add_inline_script("sl-widget-init", $inline);
+			wp_add_inline_script("sl-widget", $inline);
 
 		// auto-insert script for all posts and pages, insert widget shortcode manually
 		} elseif ('shortcode' === $this->insertion && (is_singular() || is_page())) {
 			wp_enqueue_script("sl-widget", "https://cdn.whisk.com/sdk/shopping-list.js", [], '', false);
-			wp_add_inline_script("sl-widget-init", $inline);
+			wp_add_inline_script("sl-widget", $inline);
 		}
 
 	}

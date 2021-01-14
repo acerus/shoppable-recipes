@@ -21,5 +21,5 @@ Is it free?
 Yes, the plugin and Whisk widgets are totally free.
 
 == Changelog ==
-= v 1.0 (30.12.2020) =
+= v 1.0.0 (14.01.2021) =
 * First release

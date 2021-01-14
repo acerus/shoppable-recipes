@@ -1,9 +1,12 @@
-=== Whisk Recipe Widgets ===
+=== Shoppable Recipes Widgets ===
 Contributors: acerus
 Tags: whisk, shoppable recipes, widgets, ingredients
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin lets you embed Whisk shopping tools on your website so visitors can create shopping lists and buy ingredients.
 
@@ -20,7 +23,7 @@ Yes, the plugin and Whisk widgets are totally free.
 == Screenshots ==
 1. https://paulfedorov.blog/wp-content/uploads/2020/12/whisk-widget-1.png
 2. https://paulfedorov.blog/wp-content/uploads/2020/12/whisk-widget-2.png
-3. https://paulfedorov.blog/wp-content/uploads/2020/12/whisk-recipe-widgets-4.png
+3. https://paulfedorov.blog/wp-content/uploads/2020/12/shoppable-recipes-4.png
 
 == Changelog ==
 = v 1.0 (30.12.2020) =

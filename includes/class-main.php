@@ -1,10 +1,10 @@
 <?php
 /**
- * @package whisk-recipe-widgets
+ * @package shoppable-recipes
  *
  */
 
-namespace Whisk\RecipeWidgets;
+namespace PaulFedorov\RecipeWidgets;
 
 class Main {
 
@@ -73,7 +73,7 @@ class Main {
 		add_filter('plugin_action_links', [$this, 'add_settings_link'], 10, 2);
 		add_action('upgrader_process_complete', [$this, 'upgrade'], 10, 2);
 
-		register_activation_hook(WHISK_WIDGETS_FILE, [$this, 'on_activate']);
+		register_activation_hook(SHOPPABLE_RECIPES_FILE, [$this, 'on_activate']);
 	}
 
 	/**
@@ -83,7 +83,7 @@ class Main {
 	 * @param array        $options  Array of bulk item update data.
 	 */
 	public function upgrade(\WP_Upgrader $upgrader, $options) {
-		$our_plugin = plugin_basename(WHISK_WIDGETS_FILE);
+		$our_plugin = plugin_basename(SHOPPABLE_RECIPES_FILE);
 
 		if ('update' === $options['action'] && 'plugin' === $options['type'] && isset($options['plugins'])) {
 			foreach ($options['plugins'] as $plugin) {
@@ -104,11 +104,11 @@ class Main {
 	 * @return array
 	 */
 	public function add_settings_link($actions, $plugin_file) {
-		if ('whisk-recipe-widgets/whisk-recipe-widgets.php' === $plugin_file) {
+		if ('shoppable-recipes/shoppable-recipes.php' === $plugin_file) {
 			$actions[] = sprintf(
 				'<a href="%s">%s</a>',
-				admin_url('options-general.php?page=WHISK_WIDGETS'),
-				esc_html__('Settings', 'whisk-recipe-widgets')
+				admin_url('options-general.php?page=SHOPPABLE_RECIPES'),
+				esc_html__('Settings', 'shoppable-recipes')
 			);
 		}
 

@@ -1,9 +1,9 @@
 <?php
 /**
- * @package whisk-recipe-widgets
+ * @package shoppable-recipes
  * @link https://help.mail.ru/feed/rss
  */
-namespace Whisk\RecipeWidgets;
+namespace PaulFedorov\RecipeWidgets;
 
 class Settings {
 	/**
@@ -61,7 +61,7 @@ class Settings {
 		$this->wposa_obj->add_section(
 			array(
 				'id'    => 'shopping-list',
-				'title' => __( 'Shopping List', 'whisk-recipe-widgets' ),
+				'title' => __( 'Shopping List', 'shoppable-recipes' ),
 			)
 		);
 
@@ -70,10 +70,10 @@ class Settings {
 			array(
 				'id'   => 'insert_way',
 				'type' => 'radio',
-				'name' => __( 'How to insert widget', 'whisk-recipe-widgets' ),
+				'name' => __( 'How to insert widget', 'shoppable-recipes' ),
 				'options' => array(
-					'posts' => __( 'Automatically, below posts content', 'whisk-recipe-widgets' ),
-					'shortcode' => __( 'Manually, using shortcode', 'whisk-recipe-widgets' ),
+					'posts' => __( 'Automatically, below posts content', 'shoppable-recipes' ),
+					'shortcode' => __( 'Manually, using shortcode', 'shoppable-recipes' ),
 				),
 			)
 		);
@@ -83,8 +83,8 @@ class Settings {
 			array(
 				'id'   => 'shortcode',
 				'type' => 'html',
-				'name' => __( 'Widget shortcode', 'whisk-recipe-widgets' ),
-				'desc' => __( 'If choose manual insertion, use shortcode <code>[wx-shopping-list]</code>', 'whisk-recipe-widgets' ),)
+				'name' => __( 'Widget shortcode', 'shoppable-recipes' ),
+				'desc' => __( 'If choose manual insertion, use shortcode <code>[wx-shopping-list]</code>', 'shoppable-recipes' ),)
 		);
 
 		$this->wposa_obj->add_field(
@@ -92,10 +92,10 @@ class Settings {
 			array(
 				'id'      => 'format',
 				'type'    => 'radio',
-				'name'    => __( 'Widget format', 'whisk-recipe-widgets' ),
+				'name'    => __( 'Widget format', 'shoppable-recipes' ),
 				'options' => array (
-					'compact' => __('Compact', 'whisk-recipe-widgets'),
-					'large'   => __('Large', 'whisk-recipe-widgets'),
+					'compact' => __('Compact', 'shoppable-recipes'),
+					'large'   => __('Large', 'shoppable-recipes'),
 				),
 				'default' => 'compact',
 			)
@@ -106,9 +106,9 @@ class Settings {
 			array(
 				'id'          => 'button-bg',
 				'type'        => 'color',
-				'name'        => __( 'Button color', 'whisk-recipe-widgets' ),
-				'desc'        => __( 'Color description', 'whisk-recipe-widgets' ),
-				'placeholder' => __( '#15D18F', 'whisk-recipe-widgets' ),
+				'name'        => __( 'Button color', 'shoppable-recipes' ),
+				'desc'        => __( 'Color description', 'shoppable-recipes' ),
+				'placeholder' => __( '#15D18F', 'shoppable-recipes' ),
 			)
 		);
 
@@ -117,9 +117,9 @@ class Settings {
 			array(
 				'id'          => 'button-border-radius',
 				'type'        => 'number',
-				'name'        => __( 'Button border radius', 'whisk-recipe-widgets' ),
-				'desc'        => __( 'in pixels', 'whisk-recipe-widgets' ),
-				'placeholder' => __( '4', 'whisk-recipe-widgets' ),
+				'name'        => __( 'Button border radius', 'shoppable-recipes' ),
+				'desc'        => __( 'in pixels', 'shoppable-recipes' ),
+				'placeholder' => __( '4', 'shoppable-recipes' ),
 			)
 		);
 
@@ -130,9 +130,9 @@ class Settings {
 			array(
 				'id'          => 'button-text-color',
 				'type'        => 'color',
-				'name'        => __( 'Button text color', 'whisk-recipe-widgets' ),
-				'desc'        => __( 'Color description', 'whisk-recipe-widgets' ),
-				'placeholder' => __( '#FFFFFF', 'whisk-recipe-widgets' ),
+				'name'        => __( 'Button text color', 'shoppable-recipes' ),
+				'desc'        => __( 'Color description', 'shoppable-recipes' ),
+				'placeholder' => __( '#FFFFFF', 'shoppable-recipes' ),
 			)
 		);
 
@@ -141,9 +141,9 @@ class Settings {
 			array(
 				'id'          => 'button-text',
 				'type'        => 'text',
-				'name'        => __( 'Button text', 'whisk-recipe-widgets' ),
-				'desc'        => __( 'Color description', 'whisk-recipe-widgets' ),
-				'placeholder' => __( 'Get ingredients', 'whisk-recipe-widgets' ),
+				'name'        => __( 'Button text', 'shoppable-recipes' ),
+				'desc'        => __( 'Color description', 'shoppable-recipes' ),
+				'placeholder' => __( 'Get ingredients', 'shoppable-recipes' ),
 			)
 		);
 
@@ -152,16 +152,16 @@ class Settings {
 			array(
 				'id'          => 'link-text-color',
 				'type'        => 'color',
-				'name'        => __( 'Link text color', 'whisk-recipe-widgets' ),
-				'desc'        => __( 'Color description', 'whisk-recipe-widgets' ),
-				'placeholder' => __( '#FFFFFF', 'whisk-recipe-widgets' ),
+				'name'        => __( 'Link text color', 'shoppable-recipes' ),
+				'desc'        => __( 'Color description', 'shoppable-recipes' ),
+				'placeholder' => __( '#FFFFFF', 'shoppable-recipes' ),
 			)
 		);
 
 		$this->wposa_obj->add_section(
 			array(
 				'id'    => 'support',
-				'title' => __( 'Support', 'whisk-recipe-widgets' ),
+				'title' => __( 'Support', 'shoppable-recipes' ),
 			)
 		);
 
@@ -170,8 +170,8 @@ class Settings {
 			array(
 				'id'   => 'help',
 				'type' => 'html',
-				'name' => __( 'Need help?', 'whisk-recipe-widgets' ),
-				'desc' => __( 'You can contact me via <a href="https://t.me/bewareofseagulls" target="_blank">Telegram</a> or <a href="mailto:paul.fedorov@gmail.com" target="_blank">e-mail</a>.', 'whisk-recipe-widgets' ),
+				'name' => __( 'Need help?', 'shoppable-recipes' ),
+				'desc' => __( 'You can contact me via <a href="https://t.me/PaulFedorov" target="_blank">Telegram</a> or <a href="mailto:paul.fedorov@gmail.com" target="_blank">e-mail</a>.', 'shoppable-recipes' ),
 			)
 		);
 
@@ -180,8 +180,8 @@ class Settings {
 		//	array(
 		//		'id'   => 'mark',
 		//		'type' => 'html',
-		//		'name' => __( 'Оценка', 'whisk-recipe-widgets' ),
-		//		'desc' => __( 'Хотите оценить плагин ★★★★★?<br />Сделать это можно на <a href="https://wordpress.org/support/plugin/whisk-recipe-widgets/reviews/?rate=5#new-post" target="_blank">официальном странице</a> плагина.', 'whisk-recipe-widgets' ),
+		//		'name' => __( 'Оценка', 'shoppable-recipes' ),
+		//		'desc' => __( 'Хотите оценить плагин ★★★★★?<br />Сделать это можно на <a href="https://wordpress.org/support/plugin/shoppable-recipes/reviews/?rate=5#new-post" target="_blank">официальном странице</a> плагина.', 'shoppable-recipes' ),
 		//	)
 		//);
 	}

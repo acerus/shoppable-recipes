@@ -1,21 +1,21 @@
 {
-  "name": "whisk/whisk-widgets",
-  "description": "Whisk widgets for recipes: Shopping List",
+  "name": "paul-fedorov/shoppable-recipes",
+  "description": "Shoppable recipes widgets",
   "license": "GPL-2.0",
   "keywords": [
     "whisk, shoppable recipes, shopping list, widget, foodtech"
   ],
-  "homepage": "https://github.com/acerus/whisk-widgets",
+  "homepage": "https://github.com/acerus/shoppable-recipes",
   "type": "wordpress-plugin",
   "authors": [
     {
       "name": "Pavel Fedorov",
       "email": "paul.fedorov@gmail.com",
-      "homepage": "http://paulfedorov.blog"
+      "homepage": "https://paulfedorov.blog"
     }
   ],
   "support": {
-    "issues": "https://github.com/acerus/whisk-widgets/issues"
+    "issues": "https://github.com/acerus/shoppable-recipes/issues"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -29,8 +29,7 @@
     "composer/installers": "*"
   },
   "require-dev": {
-    "wp-coding-standards/wpcs": "^1.2",
-    "wp-cli/wp-cli": "*"
+    "wp-coding-standards/wpcs": "^1.2"
   },
   "autoload": {
     "classmap": [

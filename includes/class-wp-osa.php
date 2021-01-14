@@ -1,5 +1,5 @@
 <?php
-namespace Whisk\RecipeWidgets;
+namespace PaulFedorov\RecipeWidgets;
 /**
  * Main Class file for `WP_OSA`
  *
@@ -714,17 +714,17 @@ class WP_OSA {
 	public function admin_menu() {
 		// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
 		add_options_page(
-			'Whisk Recipe Widgets',
-			'Whisk Recipe Widgets',
+			'Shoppable Recipes Widgets',
+			'Shoppable Recipes Widgets',
 			'manage_options',
-			str_replace('-', '_', WHISK_WIDGETS_SLUG),
+			str_replace('-', '_', SHOPPABLE_RECIPES_SLUG),
 			[$this, 'plugin_page']
 		);
 	}
 
 	public function plugin_page() {
 		echo '<div class="wrap">';
-		echo '<h1>Whisk Recipe Widgets <span style="font-size:50%;">v' . WHISK_WIDGETS_VERSION . '</span></h1>';
+		echo '<h1>Shoppable Recipes Widgets <span style="font-size:50%;">v' . SHOPPABLE_RECIPES_VERSION . '</span></h1>';
 		$this->show_navigation();
 		$this->show_forms();
 		echo '</div>';

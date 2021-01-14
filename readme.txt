@@ -1,4 +1,4 @@
-=== Shoppable Recipes Widgets ===
+=== Whisk Recipe Widgets ===
 Contributors: acerus
 Tags: whisk, shoppable recipes, widgets, ingredients
 Requires at least: 4.0
@@ -19,11 +19,6 @@ You can choose to automatically insert shopping list widget into all your posts 
 == Frequently Asked Questions ==
 Is it free?
 Yes, the plugin and Whisk widgets are totally free.
-
-== Screenshots ==
-1. https://paulfedorov.blog/wp-content/uploads/2020/12/whisk-widget-1.png
-2. https://paulfedorov.blog/wp-content/uploads/2020/12/whisk-widget-2.png
-3. https://paulfedorov.blog/wp-content/uploads/2020/12/shoppable-recipes-4.png
 
 == Changelog ==
 = v 1.0 (30.12.2020) =

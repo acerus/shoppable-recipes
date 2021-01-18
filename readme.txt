@@ -1,5 +1,5 @@
 === Whisk Recipe Widgets ===
-Contributors: acerus
+Contributors: paulfedorov
 Tags: whisk, shoppable recipes, widgets, ingredients
 Requires at least: 4.0
 Tested up to: 5.6

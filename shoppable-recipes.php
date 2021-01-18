@@ -6,7 +6,7 @@
  * Plugin URI:
  * Description: Shopping list widget with Whisk.com integration
  * Author: Pavel Fedorov
- * Author URI: http://paulfedorov.blog/
+ * Author URI: https://profiles.wordpress.org/paulfedorov/
  * Requires at least: 5.0
  * Tested up to: 5.6
  * Version: 1.0.4

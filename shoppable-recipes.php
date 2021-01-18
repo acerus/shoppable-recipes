@@ -3,7 +3,7 @@
  * Shoppable Recipes
  *
  * Plugin Name: Shoppable Recipes
- * Plugin URI:
+ * Plugin URI: https://wordpress.org/plugins/shoppable-recipes/
  * Description: Shopping list widget with Whisk.com integration
  * Author: Pavel Fedorov
  * Author URI: https://profiles.wordpress.org/paulfedorov/

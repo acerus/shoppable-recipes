@@ -1,5 +1,7 @@
 # Whisk Recipe Widgets
-This plugin lets you embed Whisk shopping tools on your website so visitors can create shopping lists and buy ingredients.
-Built on top of https://developers.whisk.com/tools/widget-builder, this plugin makes it easy to add shopping list widget for your recipes.
+Let your visitors save your recipes to their Whisk accounts or create instant shopping lists and go shopping for ingredients in seconds.
 
-You can choose to automatically insert shopping list widget into all your posts (below content) or go with shortcode <code>[wx-shopping-list]</code>
+Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all. It loads all necessary scripts only after real user interaction, not slowing down your website loading speed.
+
+Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
+It is compatible with all popular recipe plugins with Schema.org or JSON-ld support for recipe cards.

@@ -28,14 +28,10 @@ class Main {
 	 * @var array $defaults Default settings.
 	 */
 	private $defaults = [
-		'shopping-list' => [
-			'insert_way'           => 'shortcode',
+		'save-recipe' => [
 			'format'               => 'compact',
-			'button-bg'            => '#15D18F',
 			'button-border-radius' => 4,
-			'button-text-color'    => '#FFFFFF',
-			'button-text'          => 'Get ingredients',
-			'link-text-color'      => '#FFFFFF',
+			'link-color'           => '#15D18F'
 		],
 	];
 
@@ -117,7 +113,7 @@ class Main {
 
 	public function on_activate() {
 
-		$settings = $this->wposa_obj->get_option('button-bg', 'shopping-list');
+		$settings = $this->wposa_obj->get_option('format', 'save-recipe');
 
 		if ( ! $settings) {
 			foreach ($this->defaults as $section => $defaults) {

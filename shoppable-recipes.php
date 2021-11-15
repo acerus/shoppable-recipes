@@ -1,16 +1,16 @@
 <?php
 /**
- * Shoppable Recipes
+ * Recipe Widgets
  *
- * Plugin Name: Shoppable Recipes
- * Plugin URI:
- * Description: Shopping list widget with Whisk.com integration
+ * Plugin Name: Recipe Widgets
+ * Plugin URI: https://wordpress.org/plugins/shoppable-recipes/
+ * Description: Save to Whisk & Add to Cart - interactive Whisk.com widgets
  * Author: Pavel Fedorov
  * Author URI: https://profiles.wordpress.org/paulfedorov/
  * Requires at least: 5.0
  * Tested up to: 5.6
- * Version: 1.0.4
- * Stable tag: 1.0.4
+ * Version: 1.1
+ * Stable tag: 1.1
  *
  * Text Domain: shoppable-recipes
  * Domain Path: /languages/
@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'SHOPPABLE_RECIPES_VERSION', '1.0.4' );
+define( 'SHOPPABLE_RECIPES_VERSION', '1.1' );
 define( 'SHOPPABLE_RECIPES_PATH', __DIR__ );
-define( 'SHOPPABLE_RECIPES_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+define( 'SHOPPABLE_RECIPES_URL', plugin_dir_url( __FILE__ ) );
 define( 'SHOPPABLE_RECIPES_FILE', __FILE__ );
 define( 'SHOPPABLE_RECIPES_SLUG', 'shoppable-recipes' );
 

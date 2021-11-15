@@ -4,7 +4,7 @@ Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,10 +12,7 @@ Lightweight plugin that adds interactive Save to Whisk and Shopping List widgets
 
 == Description ==
 Let your visitors [Save your recipes](https://whisk.com/recipe-box-app/) to their Whisk accounts or create instant [Shopping Lists](https://whisk.com/grocery-list-app/) and go shopping for ingredients in seconds.
-It is compatible with all popular recipe plugins with Schema.org or JSON-ld support for recipe cards. Shortcode [whisk-widget] is available to add Whisk Widgets anywhere.
-
-Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
-Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all. It loads all necessary scripts only after real user interaction, not slowing down your website loading speed.
+It is compatible with all popular recipe plugins which have Schema.org or JSON-ld support on recipe cards. Shortcode [whisk-widget] is available to add Whisk Widgets anywhere. Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all.
 
 There are some options, that helps you change:
 
@@ -24,9 +21,12 @@ There are some options, that helps you change:
 - tracking ID
 
 Whisk Apps are available on [Google Play](https://getwhisk.com/download-android), [App Store](https://getwhisk.com/download-ios), [Galaxy Store](https://galaxy.store/whisk) or [Web](http://my.whisk.com/).
-
+After you save a recipe via Whisk Widget it is instantly available in apps too. Very convenient for shopping, sharing with friends, creating recipe collections, etc.
 
 == Frequently Asked Questions ==
+How does it work?
+Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
+
 Is it free?
 Yes, the plugin and Whisk widgets are totally free.
 
@@ -35,6 +35,8 @@ No! We care about your website performance and initially preload a very tiny (1k
 This way there is no impact on Google PageSpeed metrics and SEO.
 
 == Changelog ==
+= v 1.1.1 (15.11.2021) =
+* a better readme :)
 = v 1.1 (15.11.2021) =
 * switched to save-recipe mode
 * changed shortcode name from [wx-save-recipe] to [whisk-widget]

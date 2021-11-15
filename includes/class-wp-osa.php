@@ -715,7 +715,7 @@ class WP_OSA {
 		// add_options_page( $page_title, $menu_title, $capability, $menu_slug, array( $this, $callable ) );
 		add_options_page(
 			'Whisk Recipe Widgets',
-			'Whisk Recipe Widgets',
+			'Whisk Widgets',
 			'manage_options',
 			str_replace('-', '_', SHOPPABLE_RECIPES_SLUG),
 			[$this, 'plugin_page']

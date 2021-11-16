@@ -126,7 +126,8 @@ class Settings {
 				'type' => 'html',
 				'name' => __('Widget is not working?', 'shoppable-recipes'),
 				'desc' => __('First of all, make sure your recipe has valid structured data for Widget to use.
-							  Use <a target="_blank" href="https://developers.whisk.com/tools/recipe-content-validator">Whisk Recipe Validator</a>', 'shoppable-recipes'),
+							  Use <a target="_blank" href="https://developers.whisk.com/tools/recipe-content-validator">Whisk Recipe Validator</a>.
+							  Most of the times there is a problem with a recipe structured data and there is not enough data for widgets to pick up.', 'shoppable-recipes'),
 			]
 		);
 

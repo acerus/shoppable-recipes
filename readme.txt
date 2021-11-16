@@ -1,41 +1,59 @@
 === Whisk Recipe Widgets ===
 Contributors: paulfedorov
-Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk
+Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk, shopping list, recipe widgets
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Lightweight plugin that adds interactive Save to Whisk and Shopping List widgets for you recipes.
+Lightweight plugin that adds interactive Save to Whisk & Shopping List widgets for you recipes.
 
 == Description ==
 Let your visitors [Save your recipes](https://whisk.com/recipe-box-app/) to their Whisk accounts or create instant [Shopping Lists](https://whisk.com/grocery-list-app/) and go shopping for ingredients in seconds.
-It is compatible with all popular recipe plugins which have Schema.org or JSON-ld support on recipe cards. Shortcode [whisk-widget] is available to add Whisk Widgets anywhere. Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all.
+It is compatible with all popular recipe plugins which support Schema.org or JSON-ld. Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all.
+
+== Demo ==
+[Demo recipe](https://demo.whisk.com/pizza-alla-napoletana/)
+
+= How to use =
+Activate the plugin and use <code>[whisk-widget]</code> shortcode to add Whisk Widgets anywhere.
+You can also use this snippet to add widget to your theme's or plugin's template:
+<code>&lt;?php echo do_shortcode( "[whisk-widget]" ); ?&gt</code>
 
 There are some options, that helps you change:
 
-- widget format (compact or large)
-- button border radius
-- tracking ID
+- Widget format (Compact or Large).
+- Button border radius
+- Link color
+- Add to Cart button visibility
+- Tracking ID
 
 Whisk Apps are available on [Google Play](https://getwhisk.com/download-android), [App Store](https://getwhisk.com/download-ios), [Galaxy Store](https://galaxy.store/whisk) or [Web](http://my.whisk.com/).
 After you save a recipe via Whisk Widget it is instantly available in apps too. Very convenient for shopping, sharing with friends, creating recipe collections, etc.
 
 == Frequently Asked Questions ==
-How does it work?
+= What is the difference between widget formats? =
+<strong>Compact widget</strong> is simply a button that saves your recipe to Whisk, where you can check it's nutrition, share with friends,
+post reviews, pictures and comments and do so much more, including adding all the recipes ingredients to a shopping list.
+<strong>Large widget</strong> has 2 buttons: one for Saving Recipes. The other one is Add to Cart button that allows your visitors buy all the
+necessary ingredients from a nearest grocer with a single click. It is a very convenient feature, though mostly useful in US or UK.
+Widget can auto-detect visitor's country and hide this button if there are no supported retailers in visitor's country.
+You can also disable this button in plugin's settings.
+
+= How does it work? =
 Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
 
-Is it free?
-Yes, the plugin and Whisk widgets are totally free.
+= Is it free? =
+Yes, the plugin, Whisk widgets and Whisk Apps are totally free.
 
-Does it load a lot of 3rd-party scripts?
+= Does it load a lot of 3rd-party scripts? =
 No! We care about your website performance and initially preload a very tiny (1kb) loader script that passively detects user interaction and loads all the Whisk scripts after some action was performed by a real user.
 This way there is no impact on Google PageSpeed metrics and SEO.
 
 == Changelog ==
-= v 1.1.1 (15.11.2021) =
+= v 1.1.2 (16.11.2021) =
 * a better readme :)
 = v 1.1 (15.11.2021) =
 * switched to save-recipe mode

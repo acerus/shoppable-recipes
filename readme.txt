@@ -49,12 +49,12 @@ Check out official Whisk website [here](https://whisk.com/partners/?filter=retai
 = How does it work? =
 Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
 
-= Is it free? =
-Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are totally free.
-
 = Does it load a lot of 3rd-party scripts? =
 No! We care about your website performance and initially preload a very tiny (1kb) loader script that passively detects user interaction and loads all the Whisk scripts after some action was performed by a real user.
 This way there is no impact on Google PageSpeed metrics and SEO.
+
+= Is it free? =
+Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are totally free.
 
 == Screenshots ==
 

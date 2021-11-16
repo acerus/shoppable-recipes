@@ -35,8 +35,8 @@ After you save a recipe via Whisk Widget it is instantly available in apps too. 
 
 == Frequently Asked Questions ==
 = What is the difference between widget formats? =
-<strong>Compact widget</strong> is simply a button that saves your recipe to Whisk, where you can check it's nutrition, share with friends,
-post reviews, pictures and comments and do so much more, including adding all the recipes ingredients to a shopping list.
+<strong>Compact widget</strong> is simply a button that saves your recipe to Whisk, where you can check out all of it's ingredients, nutrition & health score. You can also share that recipe with friends,
+post a review and pictures of it, leave comments and even start a community! And of course, you can instantly create shopping list out of any recipe's ingredient list.
 
 <strong>Large widget</strong> has 2 buttons: one for Saving Recipes. The other one is Add to Cart button that allows your visitors to buy all the
 necessary ingredients from the nearest grocer with a single click. It is a very convenient feature, though mostly useful in US/UK.
@@ -49,12 +49,12 @@ Check out official Whisk website [here](https://whisk.com/partners/?filter=retai
 = How does it work? =
 Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
 
-= Is it free? =
-Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are totally free.
-
 = Does it load a lot of 3rd-party scripts? =
 No! We care about your website performance and initially preload a very tiny (1kb) loader script that passively detects user interaction and loads all the Whisk scripts after some action was performed by a real user.
 This way there is no impact on Google PageSpeed metrics and SEO.
+
+= Is it free? =
+Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are totally free.
 
 == Screenshots ==
 

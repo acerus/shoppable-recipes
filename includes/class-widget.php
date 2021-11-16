@@ -56,6 +56,9 @@ class Widget {
 		$link_color       = $this->wposa_obj->get_option('link-color', 'save-recipe');
 		$hide_add_to_cart = $this->wposa_obj->get_option('hide-cart', 'save-recipe');
 
+		$custom_widget        = $this->wposa_obj->get_option('custom-widget', 'advanced');
+		$custom_widget_toggle = $this->wposa_obj->get_option('toggle-custom-widget', 'advanced');
+
 		$options = [
 			'format'           => $format,
 			'btn_radius'       => $btn_radius ?: 4,
@@ -63,6 +66,7 @@ class Widget {
 			'link_color'       => $link_color,
 			'hide_add_to_cart' => $hide_add_to_cart
 		];
+
 
 		ob_start(); ?>
 
@@ -72,6 +76,10 @@ class Widget {
 		whisk.queue = whisk.queue || [];
 		whisk.queue.push(function () {
 			whisk.shoppingList.defineWidget("whisk-widget", {
+
+				<?php if ($custom_widget && $custom_widget_toggle === 'on') : echo $custom_widget; else : ?>
+
+				recipeUrl: 'http://demo.whisk.com/recipes/main-course/pizza-alla-napoletana/',
 				trackingId: "<?php if ($options['tracking_id']) {
 					echo $options['tracking_id'];
 				} ?>",
@@ -89,6 +97,8 @@ class Widget {
 						borderRadius: <?php echo $options['btn_radius'] ?>,
 					}
 				}
+
+				<?php endif; ?>
 			});
 		});
 

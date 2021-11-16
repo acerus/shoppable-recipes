@@ -114,6 +114,33 @@ class Settings {
 
 		$this->wposa_obj->add_section(
 			[
+				'id'    => 'advanced',
+				'title' => __('Advanced', 'shoppable-recipes'),
+			]
+		);
+
+		$this->wposa_obj->add_field(
+			'advanced',
+			[
+				'id'   => 'toggle-custom-widget',
+				'type' => 'checkbox',
+				'name' => __('Custom Widget', 'shoppable-recipes'),
+				'desc' => __('Enable', 'shoppable-recipes'),
+			]
+		);
+
+		$this->wposa_obj->add_field(
+			'advanced',
+			[
+				'id'   => 'custom-widget',
+				'type' => 'textarea',
+				'name' => __('Custom Widget Code', 'shoppable-recipes'),
+				'desc' => __('Can be used to customize widget further, if needed. Overrides all other widget settings!', 'shoppable-recipes'),
+			]
+		);
+
+		$this->wposa_obj->add_section(
+			[
 				'id'    => 'support',
 				'title' => __('Support', 'shoppable-recipes'),
 			]

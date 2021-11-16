@@ -9,8 +9,8 @@
  * Author URI: https://profiles.wordpress.org/paulfedorov/
  * Requires at least: 5.0
  * Tested up to: 5.6
- * Version: 1.1.2
- * Stable tag: 1.1.2
+ * Version: 1.1.3
+ * Stable tag: 1.1.3
  *
  * Text Domain: shoppable-recipes
  * Domain Path: /languages/
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'SHOPPABLE_RECIPES_VERSION', '1.1.2' );
+define( 'SHOPPABLE_RECIPES_VERSION', '1.1.3' );
 define( 'SHOPPABLE_RECIPES_PATH', __DIR__ );
 define( 'SHOPPABLE_RECIPES_URL', plugin_dir_url( __FILE__ ) );
 define( 'SHOPPABLE_RECIPES_FILE', __FILE__ );

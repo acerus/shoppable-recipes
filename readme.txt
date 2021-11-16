@@ -4,7 +4,7 @@ Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk, shopping li
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,8 +18,14 @@ It is compatible with all popular recipe plugins which support Schema.org or JSO
 [Demo recipe](https://demo.whisk.com/pizza-alla-napoletana/)
 
 = How to use =
-Activate the plugin and use this shortcode to display Whisk Widgets: `[whisk-widget]`.
-Alternatively, you can add this PHP snippet to your theme's or plugin's template: ``` <?php echo do_shortcode( "[whisk-widget]" ) ?>`
+Activate the plugin and use this shortcode to display Whisk Widgets:
+`
+[whisk-widget]
+`
+Alternatively, you can add this PHP snippet to your theme's or plugin's template:
+`
+<?php echo do_shortcode('[whisk-widget]'); ?>
+`
 
 = Plugin options =
 There are some options, that helps you change:

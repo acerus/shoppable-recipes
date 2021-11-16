@@ -12,16 +12,16 @@ Lightweight plugin that adds interactive Save to Whisk & Shopping List widgets f
 
 == Description ==
 Let your visitors [Save your recipes](https://whisk.com/recipe-box-app/) to their Whisk accounts or create instant [Shopping Lists](https://whisk.com/grocery-list-app/) and go shopping for ingredients in seconds.
-It is compatible with all popular recipe plugins which support Schema.org or JSON-ld. Plugin is very light and has zero impact on SEO, doesn't affect PageSpeed at all.
+It is compatible with all popular recipe plugins which support Schema.org or JSON-ld. Plugin is very light and has zero impact on Google PageSpeed metrics.
 
 == Demo ==
 [Demo recipe](https://demo.whisk.com/pizza-alla-napoletana/)
 
 = How to use =
-Activate the plugin and use <code>[whisk-widget]</code> shortcode to add Whisk Widgets anywhere.
-You can also use this snippet to add widget to your theme's or plugin's template:
-<code>&lt;?php echo do_shortcode( "[whisk-widget]" ); ?&gt</code>
+Activate the plugin and use this shortcode to display Whisk Widgets: `[whisk-widget]`.
+Alternatively, you can add this PHP snippet to your theme's or plugin's template: ``` <?php echo do_shortcode( "[whisk-widget]" ) ?>`
 
+= Plugin options =
 There are some options, that helps you change:
 
 - Widget format (Compact or Large).
@@ -37,20 +37,33 @@ After you save a recipe via Whisk Widget it is instantly available in apps too. 
 = What is the difference between widget formats? =
 <strong>Compact widget</strong> is simply a button that saves your recipe to Whisk, where you can check it's nutrition, share with friends,
 post reviews, pictures and comments and do so much more, including adding all the recipes ingredients to a shopping list.
-<strong>Large widget</strong> has 2 buttons: one for Saving Recipes. The other one is Add to Cart button that allows your visitors buy all the
-necessary ingredients from a nearest grocer with a single click. It is a very convenient feature, though mostly useful in US or UK.
+
+<strong>Large widget</strong> has 2 buttons: one for Saving Recipes. The other one is Add to Cart button that allows your visitors to buy all the
+necessary ingredients from the nearest grocer with a single click. It is a very convenient feature, though mostly useful in US/UK.
 Widget can auto-detect visitor's country and hide this button if there are no supported retailers in visitor's country.
 You can also disable this button in plugin's settings.
+
+= Where can I find full list of integrated retailers for Shopping List functionality? =
+Check out official Whisk website [here](https://whisk.com/partners/?filter=retailers). They have Walmart and Tesco!
 
 = How does it work? =
 Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
 
 = Is it free? =
-Yes, the plugin, Whisk widgets and Whisk Apps are totally free.
+Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are totally free.
 
 = Does it load a lot of 3rd-party scripts? =
 No! We care about your website performance and initially preload a very tiny (1kb) loader script that passively detects user interaction and loads all the Whisk scripts after some action was performed by a real user.
 This way there is no impact on Google PageSpeed metrics and SEO.
+
+== Screenshots ==
+
+1. Save Recipe button (compact widget)
+2. Save Recipe & Add to Cart button (large widget)
+3. Saved Recipes in Whisk App
+4. Plugin settings
+5. Shopping list widget
+6. Publisher integration example
 
 == Changelog ==
 = v 1.1.2 (16.11.2021) =

@@ -79,7 +79,6 @@ class Widget {
 
 				<?php if ($custom_widget && $custom_widget_toggle === 'on') : echo $custom_widget; else : ?>
 
-				recipeUrl: 'http://demo.whisk.com/recipes/main-course/pizza-alla-napoletana/',
 				trackingId: "<?php if ($options['tracking_id']) {
 					echo $options['tracking_id'];
 				} ?>",

@@ -4,7 +4,7 @@ Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk, shopping li
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,7 +50,7 @@ Widget can auto-detect visitor's country and hide this button if there are no su
 You can also disable this button in plugin's settings.
 
 = Where can I find full list of integrated retailers for Shopping List functionality? =
-Check out official Whisk website [here](https://whisk.com/partners/?filter=retailers). They have Walmart and Tesco!
+Check out full list [here](https://support.whisk.com/hc/en-us/articles/360042706091-Integrated-Stores). They have Walmart and Tesco!
 
 = How does it work? =
 Built on top of [Whisk Widget Builder](https://developers.whisk.com/tools/widget-builder), this plugin utilizes Whisk SDK to scan for proper recipe microdata and send it to Whisk Platform in just one click.
@@ -72,6 +72,8 @@ Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are
 6. Publisher integration example
 
 == Changelog ==
+= v 1.1.5 (19.11.2021) =
+* fixed a bug with recipe URL
 = v 1.1.3 (16.11.2021) =
 * new feature: ability to use completely custom widget code. Might be useful for some publishers with specific needs.
 = v 1.1.2 (16.11.2021) =

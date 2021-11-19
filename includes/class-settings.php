@@ -164,7 +164,7 @@ class Settings {
 				'id'   => 'help',
 				'type' => 'html',
 				'name' => __('Need help?', 'shoppable-recipes'),
-				'desc' => __('You can contact me via <a href="https://t.me/PaulFedorov" target="_blank">Telegram</a> or <a href="mailto:paul.fedorov@gmail.com" target="_blank">e-mail</a>.', 'shoppable-recipes'),
+				'desc' => __('You can contact me <a href="https://t.me/PaulFedorov" target="_blank">Telegram</a> or <a href="mailto:wordpress@whisk.com" target="_blank">e-mail</a>.', 'shoppable-recipes'),
 			]
 		);
 	}

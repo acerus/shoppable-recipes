@@ -4,7 +4,7 @@ Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk, shopping li
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,12 @@ Activate the plugin and use this shortcode to display Whisk Widgets:
 Alternatively, you can add this PHP snippet to your theme's or plugin's template:
 `
 <?php echo do_shortcode('[whisk-widget]'); ?>
+`
+
+By default, widget will use URL of the page it's inserted into and look for a recipe there. If no recipe is found, widget will not load.
+It is also possible to specify another recipe URL with 'url' shortcode parameter and use widget on a pages without recipes.
+`
+[whisk-widget url='https://my.whisk.com/recipes/1073f5bf3bf4dab40f9b0a6589309aed6e9']
 `
 
 = Plugin options =
@@ -72,6 +78,8 @@ Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are
 6. Publisher integration example
 
 == Changelog ==
+= v 1.1.6 (24.11.2021) =
+* added: new shortcode parameter (url) to specify custom recipe URL (by default widget uses URL of the page it's inserted into).
 = v 1.1.5 (19.11.2021) =
 * fixed a bug with recipe URL
 = v 1.1.3 (16.11.2021) =

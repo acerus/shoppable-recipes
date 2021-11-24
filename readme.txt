@@ -4,7 +4,7 @@ Tags: whisk, shoppable recipes, widgets, ingredients, save to whisk, shopping li
 Requires at least: 4.0
 Tested up to: 5.6
 Requires PHP: 5.6.20
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,8 @@ Yes, the plugin, Whisk widgets and [Whisk Apps](https://whisk.com/download/) are
 6. Publisher integration example
 
 == Changelog ==
+= v 1.1.7 (24.11.2021) =
+* fix compatibility with older PHP versions (like 5.6)
 = v 1.1.6 (24.11.2021) =
 * added: new shortcode parameter (url) to specify custom recipe URL (by default widget uses URL of the page it's inserted into).
 = v 1.1.5 (19.11.2021) =

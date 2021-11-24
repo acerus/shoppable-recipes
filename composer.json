@@ -21,13 +21,10 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type":"composer",
-      "url":"https://wpackagist.org"
+      "type": "composer",
+      "url": "https://wpackagist.org"
     }
   ],
-  "require": {
-    "composer/installers": "*"
-  },
   "require-dev": {
     "wp-coding-standards/wpcs": "^1.2"
   },

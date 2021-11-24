@@ -36,9 +36,38 @@ class Widget {
 	 *
 	 * @return string
 	 */
-	public function shortcode() {
+	public function shortcode($atts) {
 
-		return $this->widget();
+		$atts = shortcode_atts([
+			'url' => '',
+		], $atts);
+
+		// Remove all illegal characters from a url
+		$recipe_url = filter_var($atts['url'], FILTER_SANITIZE_URL);
+
+		// Validate url
+		if (filter_var($recipe_url, FILTER_VALIDATE_URL)) {
+			return $this->widget($recipe_url);
+		} else {
+			return $this->widget();
+		}
+	}
+
+	/**
+	 * Returns widget settings (recipeId or recipeUrl) depending on a given recipe URL.
+	 *
+	 * @param $recipe_url
+	 *
+	 * @return string
+	 */
+	private function custom_recipe_url($recipe_url) {
+
+		if ($recipe_url && parse_url($recipe_url)['host'] === 'my.whisk.com') {
+			return 'recipeId: "' . basename(parse_url($recipe_url, PHP_URL_PATH)) . '",';
+		} else {
+			return 'recipeUrl: "' . $recipe_url . '",';
+		}
+
 	}
 
 	/**
@@ -46,7 +75,7 @@ class Widget {
 	 *
 	 * @return string
 	 */
-	public function widget() {
+	public function widget($recipe_url = '') {
 
 		wp_enqueue_script("whisk-widget-loader", SHOPPABLE_RECIPES_URL . "assets/loader.js", [], '', true);
 
@@ -76,12 +105,13 @@ class Widget {
 		whisk.queue = whisk.queue || [];
 		whisk.queue.push(function () {
 			whisk.shoppingList.defineWidget("whisk-widget", {
-
 				<?php if ($custom_widget && $custom_widget_toggle === 'on') : echo $custom_widget; else : ?>
-
-				trackingId: "<?php if ($options['tracking_id']) {
+				<?php if ($recipe_url) :
+					echo $this->custom_recipe_url($recipe_url);
+				endif; ?>
+				trackingId: "<?php if ($options['tracking_id']) :
 					echo $options['tracking_id'];
-				} ?>",
+				endif; ?>",
 				onlineCheckout: {
 					enabled: <?php if ($options['hide_add_to_cart'] === "on") {
 						echo 'false';
